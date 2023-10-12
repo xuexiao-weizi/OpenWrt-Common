@@ -1733,7 +1733,8 @@ done
 
 if [[ `ls -1 | grep -c "armvirt"` -eq '0' ]]; then
   #rename -v "s/^openwrt/${Gujian_Date}-${SOURCE}-${LUCI_EDITION}-${LINUX_KERNEL}/" *
-  rename -v "s/^openwrt/OpenWrt_${CONFIG_FILE}_${Firmware_Date}-${LINUX_KERNEL}/" *
+  #rename -v "s/^openwrt/OpenWrt_${CONFIG_FILE}_${Firmware_Date}-${LINUX_KERNEL}/" *
+  rename -v "s/^openwrt/OpenWrt_${CONFIG_FILE}_${Firmware_Date}/" *
 fi
 sudo rm -rf "${CLEAR_PATH}"
 }
