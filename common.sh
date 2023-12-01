@@ -265,18 +265,15 @@ mv -f uniq.conf feeds.conf.default
 
 # 这里增加了源,要对应的删除/etc/opkg/distfeeds.conf插件源
 cat >>"feeds.conf.default" <<-EOF
-#src-git danshui1 https://github.com/281677160/openwrt-package.git;${SOURCE}
-src-git langge1 https://github.com/shidahuilang/openwrt-package.git;${SOURCE}
+src-git danshui1 https://github.com/281677160/openwrt-package.git;${SOURCE}
 EOF
 ./scripts/feeds update -a
 cat >>"feeds.conf.default" <<-EOF
-#src-git helloworld https://github.com/fw876/helloworld.git;main
-#src-git passwall3 https://github.com/xiaorouji/openwrt-passwall-packages;main
-#src-git haiibo https://github.com/haiibo/openwrt-packages.git;master
-#src-git ysx88 https://github.com/ysx88/openwrt-packages.git;master
-#src-git NueXini https://github.com/NueXini/NueXini_Packages.git;main
-src-git helloworld https://github.com/fw876/helloworld;main
+src-git helloworld https://github.com/fw876/helloworld.git;main
 src-git passwall3 https://github.com/xiaorouji/openwrt-passwall-packages;main
+src-git haiibo https://github.com/haiibo/openwrt-packages.git;master
+src-git ysx88 https://github.com/ysx88/openwrt-packages.git;master
+src-git NueXini https://github.com/NueXini/NueXini_Packages.git;main
 EOF
 
 App_path="$(find . -type d -name "applications" |grep 'luci' |sed "s?.?${HOME_PATH}?" |awk 'END {print}')"
