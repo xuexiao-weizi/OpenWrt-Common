@@ -273,7 +273,7 @@ cat >>"feeds.conf.default" <<-EOF
 #src-git helloworld https://github.com/fw876/helloworld.git;main
 #src-git passwall3 https://github.com/xiaorouji/openwrt-passwall-packages;main
 #src-git haiibo https://github.com/haiibo/openwrt-packages.git;master
-src-git helloworld https://github.com/fw876/helloworld;main
+src-git helloworld https://github.com/fw876/helloworld;master
 src-git passwall3 https://github.com/xiaorouji/openwrt-passwall-packages;main
 EOF
 
