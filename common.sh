@@ -270,7 +270,8 @@ EOF
 ./scripts/feeds update -a
 cat >>"feeds.conf.default" <<-EOF
 src-git qb https://github.com/sbwml/luci-app-qbittorrent.git;master
-src-git helloworld https://github.com/fw876/helloworld;master
+#src-git helloworld https://github.com/fw876/helloworld;master
+src-git helloworld https://github.com/fw876/helloworld;main
 src-git passwall3 https://github.com/xiaorouji/openwrt-passwall-packages;main
 EOF
 
